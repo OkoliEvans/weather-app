@@ -14,24 +14,31 @@
             const { icon, description } = data.weather[0];
             const { temp, humidity } = data.main;
             const { country, sunrise, sunset } = data.sys;
-            console.log(name, icon, description, humidity, temp, sunrise, sunset, country);
             document.querySelector('.city').innerHTML = `${name}, ${country}`;
             document.querySelector('.weather-icon').src = `//openweathermap.org/img/w/${icon}.png`;
             document.querySelector('.temperature').innerHTML = `${temp} °C`;
             document.querySelector('.humidity').innerText = `humidity: ${humidity} %`;
-            let dayLight = document.querySelector('.container');
-            if(dayLight = sunset) {
-                dayLight.style.backgroundColor = 'grey'
-            } else {
-                if (dayLight = sunrise) {
-                    dayLight.style.backgroundColor = 'white'
-                    dayLight.style.color = 'black'
-                }
-            }
-            
-        }
+            document.querySelector('.desc').innerHTML = `${description}`
+            document.querySelector('#weather').classList.remove('loading')
+            document.body.style.backgroundImage = `url("//source.unsplash.com/1600x900/?${name}")`
+        },
 
+        search: function() {
+            this.getData(document.querySelector('.search-text').value);
+        }
     }
+
+    document.querySelector('.search-btn').addEventListener('click', function(){
+        weatherApp.search();
+    })
+
+    document.querySelector('.search-text').addEventListener('keyup', function(event) {
+        if (event.key == 'Enter') {
+            weatherApp.search();
+        }
+    });
+
+    weatherApp.getData('Awka');
 
 
 

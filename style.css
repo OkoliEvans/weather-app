@@ -54,8 +54,14 @@ button:hover {
     background-color: #7c7c7c6b;
 }
 
-.temperature {
-    margin: 0;
+#weather #loading {
+    visibility: hidden;
+}
+
+#weather #loading::after {
+    visibility: visible;
+    content: "Loading...";
+    color: aqua;
 }
 
 
