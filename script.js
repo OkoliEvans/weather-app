@@ -19,7 +19,7 @@
             document.querySelector('.temperature').innerHTML = `${temp} °C`;
             document.querySelector('.humidity').innerText = `humidity: ${humidity} %`;
             document.querySelector('.desc').innerHTML = `${description}`
-            document.querySelector('#weather').classList.remove('loading')
+            //document.querySelector('#weather').classList.remove('loading')
             document.body.style.backgroundImage = `url("//source.unsplash.com/1600x900/?${name}")`
         },
 
