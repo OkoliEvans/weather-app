@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ea05df27d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Metro Weather</h1>
+    <main id="container">        
+        <div class="city">
+            <input type="text" class="search-text" placeholder="e.g Lagos">
+            <button class="search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="weather">
+            <div class="temp-display">
+                <h3 class="city"></h3>
+                <h1 class="temperature">37°C</h1>
+                <img src = "http://openweathermap.org/img/w/03n.png" alt="" class="weather-icon"/>
+            </div> 
+            
+            <div class="weather-data">Cloudy</div>
+
+            <div class="humidity">Humidity: 45%</div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
