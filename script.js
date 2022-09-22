@@ -38,7 +38,7 @@
         }
     });
 
-    weatherApp.getData('Awka');
+    weatherApp.getData('Abuja');
 
 
 
